@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Celdas - Sistema de Prisión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Sistema de Gestión de Celdas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Celdas</a></li>
+                <li><a href="#">Internos</a></li>
+                <li><a href="#">Personal</a></li>
+                <li><a href="#">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h2>Opciones</h2>
+            <ul>
+                <li><a href="#">Ver Celdas</a></li>
+                <li><a href="#" id="show-add-form">Agregar Nueva Celda</a></li>
+            </ul>
+        </aside>
+
+        
+        <main class="fondoblanco" >
+            <h2 >Listado de Celdas</h2>
+            <table id="celda-table">
+                <thead>
+                    <tr>
+                        <th>Número de Celda</th>
+                        <th>Capacidad</th>
+                        <th>Internos Actuales</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>Ocupada</td>
+                        <td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Ocupada</td>
+                        <td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>Disponible</td>
+                        <td><button class="edit-btn">Editar</button> <button class="delete-btn">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+            <form id="celda-form" style="display:none;">
+                <h3 id="form-title">Agregar Nueva Celda</h3>
+                <label for="celda-number">Número de Celda:</label>
+                <input type="text" id="celda-number" required>
+                <label for="celda-capacity">Capacidad:</label>
+                <input type="number" id="celda-capacity" required>
+                <label for="celda-internos">Internos Actuales:</label>
+                <input type="number" id="celda-internos" required>
+                <label for="celda-status">Estado:</label>
+                <select id="celda-status" required>
+                    <option value="Ocupada">Ocupada</option>
+                    <option value="Disponible">Disponible</option>
+                </select>
+                <button type="submit" id="save-celda-btn">Guardar</button>
+                <button type="button" id="cancel-btn">Cancelar</button>
+            </form>
+
+        </main>
+    </div>
+
+    
+    <footer>
+        <p>Sistema de Prisiones. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
